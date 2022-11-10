@@ -9,8 +9,11 @@ var usersRouter = require('./routes/users');
 var newCreated = require('./routes/test-api');
 var cityRouter = require('./routes/city');
 var activityRouter = require('./routes/activity2');
+var employeesRouter = require('./routes/employees');
 
 var app = express();
+var cors = require('cors');
+app.use(cors());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -27,6 +30,7 @@ app.use('/users', usersRouter);
 app.use('/test-api', newCreated);
 app.use('/city', cityRouter);
 app.use('/activity2', activityRouter);
+app.use('/employees', employeesRouter);
 
 
 // catch 404 and forward to error handler
