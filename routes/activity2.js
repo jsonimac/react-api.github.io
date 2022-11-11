@@ -37,6 +37,7 @@ router.post('/add', (req, res) => {
     res.status(200).send( newEntry );
 });
 
+
 router.put('/update/:id', (req, res) => {
     const { id } = req.params;
     let person = data.find((item) => {

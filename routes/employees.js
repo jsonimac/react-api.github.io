@@ -39,6 +39,7 @@ router.get("/age/:age", (req, res) => {
     const { age } = req.params;
     const result = employees.filter(item => item.transactionType === "O");
     
+    
     if (result.length > 0) {
       res.status(200).send({total:result.lenght});
     } else {

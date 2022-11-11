@@ -1633,6 +1633,6 @@ var city = [{"name":"ADAMS","prov_code":"0128","mun_code":"012801"},
 
 router.get('/', function(req, res, next){
     res.send(city);
-});
+}); 
 
 module.exports = router;
